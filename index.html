@@ -27,7 +27,16 @@
   <!-- NAVBAR START -->
 <div class="container mx-auto">
     <nav class="sticky top-0 z-50 h-20 flex justify-between items-center md:px-12 lg:px-20 bg-white">
-        <!-- Left Side Menu -->
+        <!-- Hamburger Menu (Visible on Small Screens) -->
+        <div class="flex md:hidden px-4">
+            <button id="mobile-menu-button" class="text-[#A26249] focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Left Side Menu (Visible on Medium Screens and Larger) -->
         <ul class="hidden md:flex w-1/3 text-lg justify-center items-center gap-8 text-[#A26249] border-t border-b border-black py-4">
             <li><a href="#services" class="hover:text-black transition-colors duration-200">SERVICE</a></li>
             <li><a href="contact.html" class="hover:text-black transition-colors duration-200">ABOUT</a></li>
@@ -39,14 +48,31 @@
             <a href="index.html" class="font-bold text-2xl md:text-3xl text-[#A26249] leading-none">VISUAL</a>
         </div>
         
-        <!-- Right Side Menu -->
+        <!-- Right Side Menu (Visible on Medium Screens and Larger) -->
         <ul class="hidden md:flex w-1/3 text-lg justify-center items-center gap-8 text-[#A26249] border-t border-b border-black py-4">
             <li><a href="#contact" class="hover:text-black transition-colors duration-200">CONTACT</a></li>
             <li><a href="#storie" class="hover:text-black transition-colors duration-200">STORIES</a></li>
         </ul>
     </nav>
+
+    <!-- Mobile Menu (Visible on Small Screens) -->
+    <ul id="mobile-menu" class="md:hidden bg-white border-t border-b border-black py-4 hidden">
+        <li><a href="#services" class="block text-lg text-[#A26249] py-2 px-4 hover:text-black">SERVICE</a></li>
+        <li><a href="contact.html" class="block text-lg text-[#A26249] py-2 px-4 hover:text-black">ABOUT</a></li>
+        <li><a href="#contact" class="block text-lg text-[#A26249] py-2 px-4 hover:text-black">CONTACT</a></li>
+        <li><a href="#storie" class="block text-lg text-[#A26249] py-2 px-4 hover:text-black">STORIES</a></li>
+    </ul>
 </div>
 <!-- NAVBAR END -->
+
+<script>
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
 
 
 
@@ -92,7 +118,7 @@
                 </div>
             </div>
             <div class="relative group">
-                <img src="img/Prewedding_E&S-312.JPEG" alt="Gambar 5" class="w-full h-full object-cover">
+                <img src="img/Prewedding_E&S-59.JPEG" alt="Gambar 5" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
                     <a href="#story5" class="text-white text-xl font-bold">E & S</a>
                 </div>
@@ -122,7 +148,7 @@
         <div class="relative overflow-hidden shadow-lg rounded-lg group">
             <img src="img/Prewedding_E&S-330.JPEG" alt="Service 2" class="w-full h-56 object-cover transition-transform duration-300 transform group-hover:scale-105">
             <div class="p-4 text-center">
-                <p class="text-xl font-bold">Prewedding</p>
+                <p class="text-xl font-bold">Engagement</p>
             </div>
         </div>
 
@@ -130,7 +156,7 @@
         <div class="relative overflow-hidden shadow-lg rounded-lg group">
             <img src="img/ILOT_300421-374.jpg" alt="Service 3" class="w-full h-56 object-cover transition-transform duration-300 transform group-hover:scale-105">
             <div class="p-4 text-center">
-                <p class="text-xl font-bold">Portrait</p>
+                <p class="text-xl font-bold">Fashion & Lifestyle</p>
             </div>
         </div>
 
@@ -138,119 +164,118 @@
         <div class="relative overflow-hidden shadow-lg rounded-lg group">
             <img src="img/Sangsaka_210421-294.jpg" alt="Service 4" class="w-full h-56 object-cover transition-transform duration-300 transform group-hover:scale-105">
             <div class="p-4 text-center">
-                <p class="text-xl font-bold">Campaign</p>
+                <p class="text-xl font-bold">F & B</p>
             </div>
         </div>
     </div>
 </div>
 <!-- Services Section End -->
 
+<!-- Contact Section -->
+<div id="contact" class="max-w-5xl mx-auto py-16 px-4">
+    <!-- Section Title -->
+    <h1 class="text-3xl font-bold text-center mb-12 text-[#A26249]">Contact</h1>
+    <hr class="border-t border-gray-300 my-7 mx-auto w-11/12 md:w-[300px]">
 
-
-
-    <!-- Contact Section -->
-    <div id="contact" class="max-w-5xl mx-auto py-16 px-4">
-        <!-- Section Title -->
-        <h1 class="text-3xl font-bold text-center mb-12 text-[#A26249]">Contact</h1>
-        <hr class="border-t border-gray-300 my-7 mx-auto w-11/12 md:w-[300px]">
-
-        <div class="flex flex-col md:flex-row justify-between items-start">
-            <!-- Left Container -->
-            <div class="md:w-1/2 md:pr-8">
-                <h2 class="text-xl font-semibold mb-6 text-[#ae7d6a]">Get in Touch</h2>
-                <p class="text-gray-600 mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <!-- Phone -->
-                    <div class="flex items-center">
-                        <div class="bg-[#ae7d6a] p-3 rounded-full text-white mr-4">
-                            <i class="fas fa-phone-alt"></i>
-                        </div>
-                        <div>
-                            <p class="font-semibold text-gray-700">Phone</p>
-                            <p class="text-gray-600">087761768857</p>
-                        </div>
+    <div class="flex flex-col md:flex-row justify-between items-start">
+        <!-- Left Container -->
+        <div class="md:w-1/2 md:pr-8">
+            <h2 class="text-xl font-semibold mb-6 text-[#ae7d6a]">Get in Touch</h2>
+            <p class="text-gray-600 mb-8">Whether you have a project in mind or just want to connect, we're here to help! Reach out to us with any questions or ideas, and let's bring your vision to life.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Phone -->
+                <div class="flex items-center">
+                    <div class="bg-[#ae7d6a] p-3 rounded-full text-white mr-4">
+                        <i class="fas fa-phone-alt"></i>
                     </div>
-
-                    <!-- Email -->
-                    <div class="flex items-center">
-                        <div class="bg-[#ae7d6a] p-3 rounded-full text-white mr-4">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div>
-                            <p class="font-semibold text-gray-700">Email</p>
-                            <p class="text-gray-600">lilacitavisuals@gmail.com</p>
-                        </div>
-                    </div>
-
-                    <!-- Address -->
-                    <div class="flex items-center">
-                        <div class="bg-[#ae7d6a] p-3 rounded-full text-white mr-4">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div>
-                            <p class="font-semibold text-gray-700">Address</p>
-                            <p class="text-gray-600">Denpasar, Bali</p>
-                        </div>
-                    </div>
-
-                    <!-- Working Hours -->
-                    <div class="flex items-center">
-                        <div class="bg-[#ae7d6a] p-3 rounded-full text-white mr-4">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div>
-                            <p class="font-semibold text-gray-700">Working Hours</p>
-                            <p class="text-gray-600">Mon-Fri 08.00-18.00</p>
-                        </div>
+                    <div>
+                        <p class="font-semibold text-gray-700">Phone</p>
+                        <p class="text-gray-600">087761768857</p>
                     </div>
                 </div>
 
-                <!-- Social Media -->
-                <div class="mt-8">
-                    <p class="text-gray-600 font-semibold">Social Media</p>
-                    <div class="flex mt-4 space-x-4 text-[#ae7d6a]">
-                        <a href="#" class="hover:text-black transition-colors duration-200"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" class="hover:text-black transition-colors duration-200"><i class="fa-solid fa-house"></i></a>
-                        <a href="#" class="hover:text-black transition-colors duration-200"><i class="fab fa-youtube"></i></a>
+                <!-- Email -->
+                <div class="flex items-center">
+                    <div class="bg-[#ae7d6a] p-3 rounded-full text-white mr-4">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-gray-700">Email</p>
+                        <p class="text-gray-600">lilacitavisuals@gmail.com</p>
+                    </div>
+                </div>
+
+                <!-- Address -->
+                <div class="flex items-center">
+                    <div class="bg-[#ae7d6a] p-3 rounded-full text-white mr-4">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-gray-700">Address</p>
+                        <p class="text-gray-600">Denpasar, Bali</p>
+                    </div>
+                </div>
+
+                <!-- Working Hours -->
+                <div class="flex items-center">
+                    <div class="bg-[#ae7d6a] p-3 rounded-full text-white mr-4">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-gray-700">Working Hours</p>
+                        <p class="text-gray-600">Mon-Fri 08.00-18.00</p>
                     </div>
                 </div>
             </div>
-          
-            <!-- Right Container -->
-            <div class="md:w-1/2 mt-8 md:mt-0">
-                <form>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <!-- Email -->
-                        <div class="flex flex-col">
-                            <label for="email" class="text-gray-700">Email</label>
-                            <input type="email" id="email" class="mt-2 p-3 border border-gray-300 rounded bg-[#f1d6c8] focus:outline-none focus:ring-2 focus:ring-[#ae7d6a]" />
-                        </div>
-                        <!-- Name -->
-                        <div class="flex flex-col">
-                            <label for="name" class="text-gray-700">Name</label>
-                            <input type="text" id="name" class="mt-2 p-3 border border-gray-300 rounded bg-[#f1d6c8] focus:outline-none focus:ring-2 focus:ring-[#ae7d6a]" />
-                        </div>
-                    </div>
-                    <!-- Phone -->
-                    <div class="flex flex-col mt-6">
-                        <label for="phone" class="text-gray-700">Phone</label>
-                        <input type="text" id="phone" class="mt-2 p-3 border border-gray-300 rounded bg-[#f1d6c8] focus:outline-none focus:ring-2 focus:ring-[#ae7d6a]" />
-                    </div>
-                    <!-- Message -->
-                    <div class="flex flex-col mt-6">
-                        <label for="message" class="text-gray-700">Message</label>
-                        <textarea id="message" class="mt-2 p-3 border border-gray-300 rounded h-32 bg-[#f1d6c8] focus:outline-none focus:ring-2 focus:ring-[#ae7d6a]"></textarea>
-                    </div>
-                    <!-- Submit Button -->
-                    <button type="submit" class="mt-8 px-6 py-3 bg-[#ae7d6a] text-white rounded-full hover:bg-[#934d3b] transition-colors duration-300">Submit</button>
-                </form>
+
+            <!-- Social Media -->
+            <div class="mt-8">
+                <p class="text-gray-600 font-semibold">Social Media</p>
+                <div class="flex mt-4 space-x-4 text-[#ae7d6a]">
+                    <a href="#" class="hover:text-black transition-colors duration-200"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="hover:text-black transition-colors duration-200"><i class="fa-solid fa-house"></i></a>
+                    <a href="#" class="hover:text-black transition-colors duration-200"><i class="fab fa-youtube"></i></a>
+                </div>
             </div>
         </div>
-        <!-- Add some extra margin to the bottom -->
-        <div class="mt-16"></div>
+      
+        <!-- Right Container -->
+        <div class="md:w-1/2 mt-8 md:mt-0">
+            <form class="w-full">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Email -->
+                    <div class="flex flex-col w-full">
+                        <label for="email" class="text-gray-700">Email</label>
+                        <input type="email" id="email" class="mt-2 p-3 w-full border border-gray-300 rounded bg-[#f1d6c8] focus:outline-none focus:ring-2 focus:ring-[#ae7d6a]" />
+                    </div>
+                    <!-- Name -->
+                    <div class="flex flex-col w-full">
+                        <label for="name" class="text-gray-700">Name</label>
+                        <input type="text" id="name" class="mt-2 p-3 w-full border border-gray-300 rounded bg-[#f1d6c8] focus:outline-none focus:ring-2 focus:ring-[#ae7d6a]" />
+                    </div>
+                </div>
+                <!-- Phone -->
+                <div class="flex flex-col mt-6 w-full">
+                    <label for="phone" class="text-gray-700">Phone</label>
+                    <input type="text" id="phone" class="mt-2 p-3 w-full border border-gray-300 rounded bg-[#f1d6c8] focus:outline-none focus:ring-2 focus:ring-[#ae7d6a]" />
+                </div>
+                <!-- Message -->
+                <div class="flex flex-col mt-6 w-full">
+                    <label for="message" class="text-gray-700">Message</label>
+                    <textarea id="message" class="mt-2 p-3 w-full border border-gray-300 rounded h-32 bg-[#f1d6c8] focus:outline-none focus:ring-2 focus:ring-[#ae7d6a]"></textarea>
+                </div>
+                <!-- Submit Button -->
+                <button type="submit" class="mt-8 px-6 py-3 w-full bg-[#ae7d6a] text-white rounded-full hover:bg-[#934d3b] transition-colors duration-300">Submit</button>
+            </form>
+        </div>
     </div>
-    <!-- End Contact Section -->
+    <!-- Add some extra margin to the bottom -->
+    <div class="mt-16"></div>
+</div>
+<!-- End Contact Section -->
+
+
 
     <!-- FOOTER -->
     <footer class="bg-[#242424] text-gray-400 py-8 mt-12">
